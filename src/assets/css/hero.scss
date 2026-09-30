@@ -1,0 +1,624 @@
+$primary-font: "DM Sans", sans-serif;
+$primary-white: #FFF;
+$primary-color: #171744;
+$primary-black: #061123;
+$secondary-color: #ff685c;
+$tertiary-color: #2F4858;
+$text-subtitle: #3937b8;
+
+
+
+.main-title{
+    color: $secondary-color;
+}
+
+
+
+// contact me 
+
+
+.btn2 {
+  /* Theme tokens — override these to recolour the button */
+  --primary: #F4FF2B;
+  --secondary: #0F191E;
+  --surface: #E2F1F2;
+  --bink: var(--secondary);   /* ink / foreground */
+  --bsurf: var(--surface);    /* surface / background */
+  position: relative;
+  isolation: isolate;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 15px 37px;
+  border: 1px solid var(--bink);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--bink);
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.btn-label {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  transition: inherit;
+}
+/* Shared sliding panel used by many fill effects */
+.btn::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  background: var(--bink);
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.4s ease;
+}
+
+.fx-27 {
+  background: conic-gradient(from 0deg, var(--bink), color-mix(in srgb, var(--primary) 80%, var(--bink)), var(--bink));
+  background-size: 200% 200%; background-position: 0 0; color: var(--bsurf); border-color: transparent;
+  transition: background-position 0.6s ease, transform 0.4s ease;
+}
+.fx-27::before { display: none; }
+.fx-27:hover { background-position: 100% 100%; transform: scale(1.04); }
+// view projects 
+.btn {
+  /* Theme tokens — override these to recolour the button */
+  --primary: #f89913;
+  --secondary: #3d2e45;
+  --surface: #E2F1F2;
+  --bink: var(--secondary);   /* ink / foreground */
+  --bsurf: var(--surface);    /* surface / background */
+  position: relative;
+  isolation: isolate;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 13px 24px;
+  border: 1px solid var(--bink);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--bink);
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  background-color: var(--primary) !important;
+}
+.btn-label {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  transition: inherit;
+}
+/* Shared sliding panel used by many fill effects */
+.btn::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  background: var(--bink);
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.4s ease;
+}
+
+.fx-8::before { border-radius: 50%; transform: scale(0); transform-origin: center; }
+.fx-8:hover::before { transform: scale(1.6); }
+.fx-8:hover .btn-label { color: var(--bsurf); }
+
+
+
+// view details 
+
+
+.btn-talk {
+  /* Theme tokens — override these to recolour the button */
+  --primary: #F4FF2B;
+  --secondary: #0F191E;
+  --surface: #E2F1F2;
+  --bink: var(--secondary);   /* ink / foreground */
+  --bsurf: var(--surface);    /* surface / background */
+  position: relative;
+  isolation: isolate;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.00em;
+//   text-transform: uppercase;
+  padding: 13px 0;
+  border: 1px solid var(--bink);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--bink);
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.btn-label {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  transition: inherit;
+}
+/* Shared sliding panel used by many fill effects */
+.btn-talk::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  background: var(--bink);
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.4s ease;
+}
+
+.fx-88 { border: none; border-bottom: 2px solid color-mix(in srgb, var(--bink) 30%, transparent); border-radius: 0; }
+.fx-88::before { top: auto; bottom: 0; height: 2px; transform: scaleX(0); transform-origin: left; }
+.fx-88:hover::before { transform: scaleX(1); height: 5px; }
+
+
+// hero section 
+// social links
+.social-links{
+    font-size: 30px;
+}
+
+
+
+.hero-section {
+    min-height: 100vh;
+    background: #ffffff;
+    padding-top: 150px;
+    overflow: hidden;
+    position: relative;
+}
+
+
+/* LEFT CONTENT */
+
+.hero-content {
+    position: relative;
+    z-index: 5;
+}
+
+.hero-small-title {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.hero-content h1 {
+    font-size: clamp(50px, 7vw, 85px);
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 15px;
+    letter-spacing: -3px;
+}
+
+.hero-content h2 {
+    font-size: clamp(25px, 3vw, 38px);
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero-content h2 span {
+    color: $secondary-color;
+}
+
+.hero-content p {
+    max-width: 600px;
+    font-size: 17px;
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+
+/* BUTTONS */
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.hero-buttons .btn {
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.hero-buttons .btn:hover {
+    transform: translateY(-4px);
+}
+
+
+/* SKILLS */
+
+.hero-skills {
+    display: flex;
+    gap: 10px;
+    margin-top: 35px;
+    flex-wrap: wrap;
+}
+
+.hero-skills span {
+    padding: 7px 15px;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    background: #fff;
+    transition: all 0.3s ease;
+}
+
+.hero-skills span:hover {
+    background: #0d6efd;
+    color: white;
+    border-color: #0d6efd;
+    transform: translateY(-3px);
+}
+
+
+/* IMAGE AREA */
+
+.hero-image-wrapper {
+    position: relative;
+    height: 600px;
+    padding-bottom: 90px;
+    margin-bottom: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* GLOW */
+
+.image-glow {
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    background: #0d6efd;
+    opacity: 0.12;
+    filter: blur(60px);
+    animation: glowPulse 4s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+
+    0%,
+    100% {
+        transform: scale(0.9);
+        opacity: 0.10;
+    }
+
+    50% {
+        transform: scale(1.1);
+        opacity: 0.18;
+    }
+}
+
+
+/* IMAGE */
+
+.hero-image-container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-profile-image {
+    width: 390px;
+    height: 470px;
+    object-fit: cover;
+    border-radius: 25px;
+    transition:
+        transform 0.5s ease,
+        box-shadow 0.5s ease,
+        filter 0.5s ease;
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.15);
+}
+
+
+/* IMAGE HOVER */
+
+.hero-image-container:hover .hero-profile-image {
+    transform: scale(1.05) rotate(2deg) !important;
+
+    box-shadow:
+        0 35px 80px rgba(13, 110, 253, 0.30);
+
+    filter: brightness(1.05);
+}
+
+
+/* FLOATING CARDS */
+
+.floating-card {
+    position: absolute;
+    z-index: 5;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 12px 18px;
+
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.12);
+
+    animation: floatingCard 4s ease-in-out infinite;
+}
+
+.floating-card span {
+    font-size: 25px;
+}
+
+.floating-card strong {
+    display: block;
+    font-size: 14px;
+}
+
+.floating-card small {
+    display: block;
+    color: #777;
+    font-size: 12px;
+}
+
+.card-one {
+    left: 0;
+    top: 25%;
+}
+
+.card-two {
+    right: 0;
+    bottom: 22%;
+    animation-delay: 1s;
+}
+
+
+@keyframes floatingCard {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+
+/* MOBILE */
+
+@media (max-width: 991px) {
+
+    .hero-section {
+        padding-top: 60px;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero-content p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-skills {
+        justify-content: center;
+    }
+
+    .hero-image-wrapper {
+        height: 550px;
+        margin-top: 30px;
+    }
+
+    .hero-profile-image {
+        background-color: #fff;
+        width: 320px;
+        height: 400px;
+    }
+
+    .card-one {
+        left: 5%;
+    }
+
+    .card-two {
+        right: 5%;
+    }
+}
+
+
+@media (max-width: 576px) {
+
+    .hero-profile-image {
+        width: 280px;
+        height: 350px;
+    }
+
+    .image-glow {
+        width: 300px;
+        height: 300px;
+    }
+
+    .floating-card {
+        padding: 8px 12px;
+    }
+
+    .floating-card strong {
+        font-size: 12px;
+    }
+
+    .floating-card small {
+        font-size: 10px;
+    }
+
+    .card-one {
+        left: 0;
+    }
+
+    .card-two {
+        right: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* From Uiverse.io by Praashoo7 */ 
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.up {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+}
+
+.down {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+}
+
+.card1 {
+  width: 90px;
+  height: 90px;
+  outline: none;
+  border: none;
+  background: white;
+  border-radius: 90px 5px 5px 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: .2s ease-in-out;
+}
+
+.instagram {
+  margin-top: 1.5em;
+  margin-left: 1.2em;
+  fill: #cc39a4;
+}
+
+.card2 {
+  width: 90px;
+  height: 90px;
+  outline: none;
+  border: none;
+  background: white;
+  border-radius: 5px 90px 5px 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: .2s ease-in-out;
+}
+
+.twitter {
+  margin-top: 1.5em;
+  margin-left: -.9em;
+  fill: #03A9F4;
+}
+
+.card3 {
+  width: 90px;
+  height: 90px;
+  outline: none;
+  border: none;
+  background: white;
+  border-radius: 5px 5px 5px 90px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: .2s ease-in-out;
+}
+
+.github {
+  margin-top: -.6em;
+  margin-left: 1.2em;
+}
+
+.card4 {
+  width: 90px;
+  height: 90px;
+  outline: none;
+  border: none;
+  background: white;
+  border-radius: 5px 5px 90px 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: .2s ease-in-out;
+}
+
+.discord {
+  margin-top: -.9em;
+  margin-left: -1.2em;
+  fill: #8c9eff;
+}
+
+.card1:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: #cc39a4;
+}
+
+.card1:hover .instagram {
+  fill: white;
+}
+
+.card2:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: #03A9F4;
+}
+
+.card2:hover .twitter {
+  fill: white;
+}
+
+.card3:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: black;
+}
+
+.card3:hover .github {
+  fill: white;
+}
+
+.card4:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: #8c9eff;
+}
+
+.card4:hover .discord {
+  fill: white;
+}

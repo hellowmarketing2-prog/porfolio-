@@ -1,0 +1,526 @@
+/**** Google Font **********/
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+/**** Global Variables **********/
+$primary-font: "DM Sans", sans-serif;
+$primary-white: #FFF;
+$primary-color: #171744;
+$primary-black: #061123;
+$secondary-color: #ff685c;
+$tertiary-color: #2F4858;
+$text-subtitle: #3937b8;
+
+
+
+
+
+
+
+
+
+body {
+    font-size: 1em;
+    color: $primary-black;
+    font-weight: 500;
+    // font-family: "Cormorant Garamond", serif;
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2em;
+    font-weight: 600;
+    // font-family: "Playfair Display", serif;
+}
+
+h3 {
+    font-size: 1.3em;
+}
+
+h4 {
+    font-size: 1em;
+}
+
+a {
+    text-decoration: none;
+    color: $primary-black;
+
+    &::hover {
+        color: $primary-color;
+    }
+}
+
+.primary-text {
+    color: $primary-color ;
+}
+
+.secondary-text {
+    color: $secondary-color ;
+}
+
+
+ul {
+    padding-left: 0;
+
+    li {
+        list-style: none;
+    }
+}
+.nav-tabs{
+    .nav-link{
+        color: $primary-black;
+    }
+}
+
+
+.btn {
+     &.btn-size{
+        background-color: rgba($primary-black, 0.03);
+        border-color: rgba($primary-black, 0.05);
+        padding: 7px 15px;
+        &.active{
+            border-color:  rgba($primary-black, 0.20);;
+        }
+        &:hover{
+            border-color:  rgba($primary-black, 0.20);;
+            color: $primary-black;
+        }
+    }
+
+    &.btn-primary {
+        background-color: $primary-color;
+        border-color: $primary-color;
+        padding: 7px 25px;
+
+        &:hover {
+            background-color: $primary-black;
+            border-color: $primary-black;
+            color: $primary-white;
+        }
+    }
+
+    &.btn-secondary {
+        background-color: $primary-black;
+        border-color: $primary-black;
+        color: $primary-white;
+        padding: 7px 25px;
+
+        &:hover {
+            background-color: $primary-color;
+            border-color: $primary-color;
+            color: $primary-white;
+        }
+    }
+}
+.small{
+   border-radius : 13px;
+    padding: 13px 30px !important;
+    
+}
+hr{
+    color: $tertiary-color;
+}
+*/* =========================
+   FIXED HEADER
+========================= */
+
+.fixed-header {
+    position: fixed;
+    top: 8px;
+    left: 20px;
+    right: 20px;
+    z-index: 9999;
+    border-radius: 15px;
+    overflow: visible !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+// navbar button
+.gemilan-bt-send {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: 0;
+  cursor: pointer;
+  font-family: system-ui,-apple-system,Segoe UI,sans-serif;
+  font-weight: 700;
+  font-size: .95rem;
+  color: #fff;
+  padding: 13px 24px;
+  border-radius: 999px;
+//   background: linear-gradient(135deg,#2f5aa8,#0f7d8c);
+background-color: $secondary-color;
+  box-shadow: 0 10px 22px rgba(47,90,168,.3);
+  transition: box-shadow .2s ease;
+}
+
+.gemilan-bt-send__p {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+  flex: none;
+}
+
+.gemilan-bt-send__p svg {
+  position: absolute;
+  inset: 0;
+  width: 20px;
+  height: 20px;
+  transition: transform .45s cubic-bezier(.65,0,.35,1);
+}
+
+.gemilan-bt-send__p svg:nth-child(2) {
+  transform: translate(-140%,140%);
+}
+
+.gemilan-bt-send:hover {
+  box-shadow: 0 14px 28px rgba(47,90,168,.42);
+}
+
+.gemilan-bt-send:hover .gemilan-bt-send__p svg:nth-child(1) {
+  transform: translate(140%,-140%);
+}
+
+.gemilan-bt-send:hover .gemilan-bt-send__p svg:nth-child(2) {
+  transform: translate(0,0);
+}
+
+.gemilan-bt-send.gc-demo {
+  box-shadow: 0 14px 28px rgba(47,90,168,.42);
+}
+
+.gemilan-bt-send.gc-demo .gemilan-bt-send__p svg:nth-child(1) {
+  transform: translate(140%,-140%);
+}
+
+.gemilan-bt-send.gc-demo .gemilan-bt-send__p svg:nth-child(2) {
+  transform: translate(0,0);
+}
+/* Hormati permintaan "kurangi gerak" dari sistem pengguna. */
+
+@media (prefers-reduced-motion: reduce) {
+  .gemilan-bt-send, .gemilan-bt-send *, .gemilan-bt-send::before, .gemilan-bt-send::after {
+    animation: none!important;
+    transition-duration: .01ms!important;
+  }
+}
+/* Cincin fokus keyboard. currentColor mengikuti warna komponen sendiri. */
+
+.gemilan-bt-send :is(a,button,[tabindex]):focus-visible, .gemilan-bt-send :is(input,select,textarea):not([type=checkbox]):not([type=radio]):focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+/* Input yang disembunyikan: cincin dipindah ke elemen yang tampak. */
+
+.gemilan-bt-send :is(input[type=checkbox],input[type=radio]):focus-visible + * {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+/* Akarnya sendiri yang interaktif, jadi cincinnya dipasang di situ. */
+
+.gemilan-bt-send:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+/* =========================
+   TOP BANNER
+========================= */
+
+.top-banner {
+    background: #212529;
+    height: 37px;
+    display: flex;
+       border-top-left-radius: 8px;
+       border-top-right-radius: 8px;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.top-banner span {
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+header .navbar {
+    min-height: 80px;
+    border-radius: 30px;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    /* IMPORTANT */
+    overflow: visible !important;
+}
+
+header .navbar-collapse {
+    overflow: visible !important;
+}
+
+header .navbar-brand {
+    margin-right: 0;
+}
+
+
+/* =========================
+   NAV LINKS
+========================= */
+
+header .navbar-expand-lg .navbar-nav .nav-link {
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #111;
+    padding: 10px 15px;
+    transition: 0.3s ease;
+}
+
+header .navbar-expand-lg .navbar-nav .nav-link:hover {
+    color: $secondary-color;
+}
+
+ /* =========================
+   CUSTOM HOVER DROPDOWN
+========================= */
+
+.custom-dropdown {
+    position: relative;
+}
+
+
+/* Dropdown hidden */
+.custom-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    min-width: 210px;
+
+    background: #fff;
+    border-radius: 10px;
+
+    padding: 8px 0;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transform: translateY(10px);
+
+    transition:
+        opacity 0.5s ease,
+        transform 0.5s ease,
+        visibility 0.5s ease;
+
+    z-index: 99999;
+}
+
+
+/* Hover = OPEN */
+.custom-dropdown:hover .custom-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+
+/* Dropdown links */
+.custom-dropdown-menu .about,
+.custom-dropdown-menu .service,
+.custom-dropdown-menu .project {
+    border-top: 2px solid red;
+}
+
+.custom-dropdown-menu a {
+    display: block;
+
+    padding: 11px 20px;
+
+    color: #111;
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    transition: all 0.25s ease;
+}
+
+
+/* Hover item */
+.custom-dropdown-menu a:hover {
+    background: #f1f5ff;
+    color: $secondary-color;
+    padding-left: 25px;
+}
+
+/* =========================
+   DROPDOWN ARROW
+========================= */
+
+.dropdown-arrow {
+    display: inline-block;
+    margin-left: 0px;
+
+    font-size: 20px;
+    font-weight: 700;
+
+    transition: transform 0.6s ease;
+}
+
+
+/* Arrow rotate on hover */
+
+.custom-dropdown:hover .dropdown-arrow {
+    transform: rotate(180deg);
+}
+// header {
+//     .navbar-expand-lg {
+//         .navbar-nav {
+//             .nav-link {
+//                 font-size: 1.2em;
+//                 font-weight: 500;
+//                 color: $primary-black;
+//                 padding: 10px 15px;
+//             }
+//         }
+//     }
+// }
+
+
+
+
+
+
+
+.section-1 {
+    .swiper {
+        .swiper-wrapper {
+            .swiper-slide {
+                height: 470px;
+
+                .content {
+                    height: 100%;
+                    width: 100%;
+                    background-size: cover;
+                    // background-position: center;
+                    background-repeat: no-repeat;
+                }
+            }
+        }
+    }
+}
+
+.product {
+    .card-img {
+        overflow: hidden;
+        border-radius: 10px;
+
+        img {
+            transition: all 0.3s ease-in-out;
+            border-radius: 10px;
+        }
+    }
+
+    &:hover {
+        img {
+            scale: 1.2;
+        }
+    }
+
+    .card-body {
+        padding: 0;
+
+        a {
+            font-size: 1.2em;
+            font-weight: 500;
+            color: $primary-black;
+        }
+
+        a:hover {
+            color: $primary-color;
+        }
+
+        .price {
+            font-size: 1em;
+            font-weight: 500;
+            color: $primary-color;
+            padding-bottom: 20px;
+        }
+
+        span {
+            font-size: 0.9em;
+            font-weight: 500;
+            color: rgba($primary-black, 0.6);
+        }
+    }
+}
+
+.product-detail {
+    .mySwiper {
+        .swiper-slide {
+            height: auto !important;
+        }
+
+       
+
+    }
+     .price {
+            font-weight: bold;
+
+            span {
+                color: rgba($color: $primary-black, $alpha: 0.50);
+            }
+        }
+}
+
+.login{
+    width: 350px;
+}
+
+
+.sidebar{
+    ul{
+        li{
+            border-bottom: 1px solid rgba(16, 17, 35, 0.2);
+            margin-bottom: 2px;
+            a{
+                display: block;
+                padding: 10px 15px;
+                color: $primary-black;
+                &:hover{
+                    color: $primary-color;
+                }
+            }
+            button{
+                 &:hover{
+                    color: $primary-black;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 375px) and (max-width: 1351px) {
+    .swiper {
+        .swiper-wrapper {
+            .swiper-slide {
+                height: 400px;
+
+            }
+        }
+    }
+}

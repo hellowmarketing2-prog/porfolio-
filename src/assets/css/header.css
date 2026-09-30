@@ -1,0 +1,15 @@
+
+:root{
+    --secondary-color: #ff685c;
+}
+
+.text-second-title{
+    color: var(--secondary-color);
+}
+
+.header-section{
+    background: #ffffff;
+}
+.text-decoration{
+    text-decoration: none;
+}

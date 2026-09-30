@@ -1,0 +1,801 @@
+$primary-font: "DM Sans", sans-serif;
+$primary-white: #FFF;
+$primary-color: #171744;
+$primary-black: #061123;
+$secondary-color: #ff685c;
+$tertiary-color: #2F4858;
+$text-subtitle: #3937b8;
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer-section {
+    position: relative;
+
+    width: 100%;
+
+    background: #111827;
+
+    color: #ffffff;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   CTA SECTION
+========================================= */
+
+.footer-cta {
+    position: relative;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 100px 7% 90px;
+
+    text-align: center;
+
+    overflow: hidden;
+}
+
+
+.footer-cta-content {
+    position: relative;
+
+    max-width: 750px;
+
+    margin: auto;
+
+    z-index: 2;
+}
+
+
+.footer-small-title {
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+    color: #60a5fa;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+
+.footer-cta h2 {
+    margin: 0 0 20px;
+
+    color: $secondary-color;
+
+    font-size: 54px;
+
+    font-weight: 700;
+
+    line-height: 1.15;
+}
+
+
+.footer-cta h2 span {
+    color: $tertiary-color;
+}
+
+
+.footer-cta p {
+    max-width: 600px;
+
+    margin: 0 auto 35px;
+
+    color: #94a3b8;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   CTA BUTTON
+========================================= */
+
+.footer-cta-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 14px 18px 14px 25px;
+
+    border: 1px solid #2563eb;
+
+    border-radius: 10px;
+
+    background: #2563eb;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        background 0.35s ease;
+}
+
+
+.footer-button-arrow {
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 7px;
+
+    background: rgba(255, 255, 255, 0.15);
+
+    font-size: 18px;
+
+    transition: transform 0.35s ease;
+}
+
+
+.footer-cta-button:hover {
+    color: #ffffff;
+
+    background: #3b82f6;
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 35px rgba(37, 99, 235, 0.35);
+}
+
+
+.footer-cta-button:hover
+.footer-button-arrow {
+    transform: translateX(5px);
+}
+
+
+/* =========================================
+   DECORATIVE CIRCLE
+========================================= */
+
+.footer-big-circle {
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    right: -180px;
+    top: -170px;
+
+    border: 1px solid rgba(96, 165, 250, 0.15);
+
+    border-radius: 50%;
+
+    animation: footerRotate 15s linear infinite;
+}
+
+
+.footer-big-circle::before {
+    content: "";
+
+    position: absolute;
+
+    width: 260px;
+    height: 260px;
+
+    left: 80px;
+    top: 80px;
+
+    border: 1px solid rgba(96, 165, 250, 0.1);
+
+    border-radius: 50%;
+}
+
+
+@keyframes footerRotate {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* =========================================
+   MAIN FOOTER
+========================================= */
+
+.footer-main {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 65px 7%;
+
+    display: grid;
+
+    grid-template-columns:
+        1.5fr
+        1fr
+        1fr
+        1.3fr;
+
+    gap: 50px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+/* =========================================
+   BRAND
+========================================= */
+
+.footer-logo {
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    color: $secondary-color;
+
+    font-size: 27px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    text-decoration: none;
+
+    transition: transform 0.3s ease;
+}
+
+
+.footer-logo span {
+    color: #3b82f6;
+}
+
+
+.footer-logo:hover {
+    color: #ffffff;
+
+    transform: translateX(4px);
+}
+
+
+.footer-brand p {
+    max-width: 300px;
+
+    margin: 0 0 25px;
+
+    color: #94a3b8;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   SOCIAL ICONS
+========================================= */
+
+.footer-socials {
+    display: flex;
+
+    gap: 10px;
+}
+
+
+.footer-socials a {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    border-radius: 10px;
+
+    background: rgba(255, 255, 255, 0.03);
+
+    color: #94a3b8;
+
+    font-size: 17px;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+.footer-socials a:hover {
+    color: #ffffff;
+
+    background: #2563eb;
+
+    border-color: #2563eb;
+
+    transform:
+        translateY(-6px)
+        rotate(-4deg);
+
+    box-shadow:
+        0 10px 25px rgba(37, 99, 235, 0.25);
+}
+
+
+/* =========================================
+   COLUMNS
+========================================= */
+
+.footer-column h4 {
+    margin: 3px 0 22px;
+
+    color: $secondary-color;
+
+    font-size: 15px;
+
+    font-weight: 700;
+}
+
+
+.footer-column ul {
+    list-style: none;
+
+    padding: 0;
+
+    margin: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+.footer-column ul li a {
+    position: relative;
+
+    display: inline-block;
+
+    color: #94a3b8;
+
+    font-size: 14px;
+
+    text-decoration: none;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.footer-column ul li a::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -3px;
+
+    width: 0;
+
+    height: 1px;
+
+    background: #3b82f6;
+
+    transition: width 0.3s ease;
+}
+
+
+.footer-column ul li a:hover {
+    color: #60a5fa;
+
+    transform: translateX(5px);
+}
+
+
+.footer-column ul li a:hover::before {
+    width: 100%;
+}
+
+
+/* =========================================
+   CONTACT
+========================================= */
+
+.footer-contact {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+
+.footer-contact-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    color: #94a3b8;
+
+    font-size: 13px;
+
+    text-decoration: none;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.footer-contact-item:hover {
+    color: #60a5fa;
+
+    transform: translateX(4px);
+}
+
+
+.contact-icon {
+    width: 35px;
+    height: 35px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 8px;
+
+    color: #60a5fa;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.footer-contact-item:hover
+.contact-icon {
+    background: #2563eb;
+
+    color: #ffffff;
+
+    transform: rotate(-8deg);
+}
+
+
+/* =========================================
+   BOTTOM BAR
+========================================= */
+
+.footer-bottom {
+    position: relative;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    min-height: 75px;
+
+    padding: 20px 7%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+.footer-bottom p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 13px;
+}
+
+
+.footer-bottom strong {
+    color: #94a3b8;
+}
+
+
+.footer-bottom-links {
+    display: flex;
+
+    gap: 25px;
+}
+
+
+.footer-bottom-links a {
+    color: #64748b;
+
+    font-size: 13px;
+
+    text-decoration: none;
+
+    transition: color 0.3s ease;
+}
+
+
+.footer-bottom-links a:hover {
+    color: #60a5fa;
+}
+
+
+/* =========================================
+   BACK TO TOP
+========================================= */
+
+.back-to-top {
+    position: relative;
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    border-radius: 10px;
+
+    background: #111827;
+
+    color: #ffffff;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.back-to-top:hover {
+    background: #2563eb;
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 10px 25px rgba(37, 99, 235, 0.3);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 991px) {
+
+    .footer-main {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 45px;
+    }
+
+    .footer-cta h2 {
+        font-size: 45px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 767px) {
+
+    .footer-cta {
+        padding: 75px 25px 65px;
+    }
+
+    .footer-cta h2 {
+        font-size: 36px;
+    }
+
+    .footer-cta p {
+        font-size: 14px;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr;
+
+        padding: 50px 25px;
+
+        gap: 40px;
+    }
+
+    .footer-brand p {
+        max-width: 100%;
+    }
+
+    .footer-bottom {
+        padding: 20px 25px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        text-align: center;
+    }
+
+    .back-to-top {
+        position: absolute;
+
+        right: 20px;
+
+        bottom: 20px;
+    }
+
+    .footer-bottom-links {
+        width: 100%;
+
+        justify-content: center;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+           /* From Uiverse.io by david-mohseni */ 
+.wrapper {
+  display: inline-flex;
+  list-style: none;
+  height: 120px;
+  width: 100%;
+  padding-top: 40px;
+  font-family: "Poppins", sans-serif;
+  justify-content: center;
+}
+
+.wrapper .icon {
+  position: relative;
+  background: #742f2f;
+  border-radius: 50%;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #fff;
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #fff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+  background: #1877f2;
+  color: #fff;
+}
+
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+  background: #0d1f2a;
+  color: #fff;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background: #e4405f;
+  color: #fff;
+}
+
+.twitter{
+    fill: #81a0ad !important;
+margin: 9px -8px;
+margin-top: 13px !important;
+}
