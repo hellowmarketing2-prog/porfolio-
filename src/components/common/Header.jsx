@@ -14,7 +14,7 @@ export const Header = () => {
       <div className="fixed-header">
         {/* Top Banner */}
         <div className="top-banner">
-          <span>Its my Portfolio</span>
+          <span>Its my Portfolio.</span>
         </div>
 
         {/* Navbar */}
