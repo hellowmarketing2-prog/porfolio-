@@ -51,7 +51,7 @@ a {
     text-decoration: none;
     color: $primary-black;
 
-    &::hover {
+    &:hover {
         color: $primary-color;
     }
 }
