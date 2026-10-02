@@ -1,0 +1,1377 @@
+$primary: #4f46e5;
+$secondary: #06b6d4;
+$danger: #ff685c;
+$success: #22c55e;
+$dark: #111827;
+$dark-blue: #171744;
+$white: #ffffff;
+$light: #f7f9fc;
+$text: #172033;
+$muted: #667085;
+$border: #e7eaf0;
+
+
+/* =====================================================
+   MAIN
+===================================================== */
+
+.bugfix-page {
+  background: $light;
+  color: $text;
+  overflow: hidden;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.bugfix-hero {
+  position: relative;
+  padding: 150px 0 120px;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(255, 104, 92, 0.13),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 10% 70%,
+      rgba(79, 70, 229, 0.12),
+      transparent 30%
+    ),
+    $light;
+}
+
+.bugfix-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+.bugfix-glow-one {
+  width: 320px;
+  height: 320px;
+  background: rgba(255, 104, 92, 0.12);
+  top: 50px;
+  right: -100px;
+  animation: bugfixGlow 7s ease-in-out infinite;
+}
+
+.bugfix-glow-two {
+  width: 260px;
+  height: 260px;
+  background: rgba(79, 70, 229, 0.12);
+  bottom: -100px;
+  left: -80px;
+  animation: bugfixGlow 8s ease-in-out infinite reverse;
+}
+
+@keyframes bugfixGlow {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(20px, -20px);
+  }
+}
+
+
+/* Badge */
+
+.bugfix-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 16px;
+  border-radius: 50px;
+
+  background: rgba(255, 104, 92, 0.08);
+  border: 1px solid rgba(255, 104, 92, 0.25);
+
+  color: $danger;
+
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+
+  margin-bottom: 25px;
+
+  animation: bugfixBadge 3s ease-in-out infinite;
+}
+
+.bugfix-badge-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+
+  background: $danger;
+
+  box-shadow:
+    0 0 15px rgba(255, 104, 92, 0.8);
+}
+
+@keyframes bugfixBadge {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+
+/* Hero Heading */
+
+.bugfix-hero h1 {
+  margin: 0;
+
+  font-size: clamp(48px, 6vw, 78px);
+  line-height: 1.02;
+
+  font-weight: 800;
+  letter-spacing: -3px;
+
+  color: $dark-blue;
+}
+
+.bugfix-hero h1 span {
+  background:
+    linear-gradient(
+      90deg,
+      $danger,
+      #f97316,
+      $primary
+    );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.bugfix-hero-text {
+  max-width: 680px;
+
+  margin: 30px 0;
+
+  color: $muted;
+
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+
+/* Buttons */
+
+.bugfix-hero-buttons {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.bugfix-primary-btn,
+.bugfix-secondary-btn {
+  min-height: 52px;
+
+  padding: 0 23px;
+
+  border-radius: 12px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  text-decoration: none;
+
+  font-weight: 700;
+
+  transition: 0.35s ease;
+}
+
+.bugfix-primary-btn {
+  color: $white;
+
+  background:
+    linear-gradient(
+      135deg,
+      $danger,
+      #f97316
+    );
+
+  box-shadow:
+    0 14px 30px rgba(255, 104, 92, 0.22);
+}
+
+.bugfix-primary-btn:hover {
+  color: $white;
+
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 20px 40px rgba(255, 104, 92, 0.3);
+}
+
+.bugfix-primary-btn svg {
+  transition: 0.3s ease;
+}
+
+.bugfix-primary-btn:hover svg {
+  transform: translate(4px, -4px);
+}
+
+.bugfix-secondary-btn {
+  color: $dark;
+
+  background: $white;
+
+  border: 1px solid $border;
+}
+
+.bugfix-secondary-btn:hover {
+  color: $danger;
+
+  border-color: $danger;
+
+  transform: translateY(-4px);
+}
+
+
+/* Stats */
+
+.bugfix-stats {
+  display: flex;
+
+  gap: 34px;
+
+  margin-top: 55px;
+
+  flex-wrap: wrap;
+}
+
+.bugfix-stats div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.bugfix-stats strong {
+  font-size: 23px;
+  color: $dark-blue;
+}
+
+.bugfix-stats span {
+  font-size: 11px;
+
+  color: $muted;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+}
+
+
+/* =====================================================
+   TERMINAL VISUAL
+===================================================== */
+
+.bugfix-visual {
+  position: relative;
+
+  min-height: 520px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bugfix-terminal {
+  width: min(100%, 440px);
+
+  background: #111827;
+
+  border-radius: 24px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 35px 80px rgba(15, 23, 42, 0.25),
+    0 0 0 1px rgba(255, 255, 255, 0.05);
+
+  transform: rotate(2deg);
+
+  animation:
+    bugfixTerminalFloat
+    5s
+    ease-in-out
+    infinite;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+@keyframes bugfixTerminalFloat {
+  0%,
+  100% {
+    transform: rotate(2deg) translateY(0);
+  }
+
+  50% {
+    transform: rotate(1deg) translateY(-12px);
+  }
+}
+
+.bugfix-terminal-top {
+  height: 58px;
+
+  padding: 0 20px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  color: #d1d5db;
+
+  background: #0f172a;
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.06);
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.bugfix-window-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.bugfix-window-dots span {
+  width: 9px;
+  height: 9px;
+
+  border-radius: 50%;
+
+  background: #475569;
+}
+
+.bugfix-terminal-body {
+  padding: 28px 22px;
+
+  min-height: 310px;
+}
+
+.terminal-line {
+  display: flex;
+
+  min-height: 38px;
+
+  color: #cbd5e1;
+
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-size: 12px;
+
+  line-height: 1.8;
+}
+
+.terminal-line i {
+  width: 30px;
+
+  flex-shrink: 0;
+
+  margin-right: 12px;
+
+  color: #475569;
+
+  font-style: normal;
+}
+
+.terminal-command {
+  color: #67e8f9;
+}
+
+.terminal-error {
+  color: #fb7185;
+}
+
+.terminal-warning {
+  color: #fbbf24;
+}
+
+.terminal-success {
+  color: #4ade80;
+}
+
+.bugfix-status {
+  min-height: 52px;
+
+  padding: 0 20px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  color: #94a3b8;
+
+  background: #0f172a;
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.06);
+
+  font-size: 12px;
+}
+
+.bugfix-status strong {
+  margin-left: auto;
+
+  color: #4ade80;
+}
+
+.bugfix-status-dot {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #4ade80;
+
+  box-shadow:
+    0 0 10px
+    rgba(74, 222, 128, 0.8);
+}
+
+
+/* Floating icons */
+
+.bugfix-floating {
+  position: absolute;
+
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 16px;
+
+  background: $white;
+
+  color: $primary;
+
+  border: 1px solid $border;
+
+  box-shadow:
+    0 18px 35px
+    rgba(15, 23, 42, 0.1);
+
+  z-index: 3;
+}
+
+.bugfix-icon-one {
+  top: 60px;
+  left: 0;
+
+  color: $danger;
+
+  animation:
+    bugFloatOne
+    4s
+    ease-in-out
+    infinite;
+}
+
+.bugfix-icon-two {
+  right: -10px;
+  top: 180px;
+
+  color: $primary;
+
+  animation:
+    bugFloatTwo
+    4.5s
+    ease-in-out
+    infinite;
+}
+
+.bugfix-icon-three {
+  bottom: 65px;
+  left: 15px;
+
+  color: $success;
+
+  animation:
+    bugFloatThree
+    5s
+    ease-in-out
+    infinite;
+}
+
+@keyframes bugFloatOne {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-5deg);
+  }
+
+  50% {
+    transform: translateY(-15px) rotate(4deg);
+  }
+}
+
+@keyframes bugFloatTwo {
+  0%,
+  100% {
+    transform: translateY(0) rotate(5deg);
+  }
+
+  50% {
+    transform: translateY(12px) rotate(-4deg);
+  }
+}
+
+@keyframes bugFloatThree {
+  0%,
+  100% {
+    transform: translateY(0) rotate(4deg);
+  }
+
+  50% {
+    transform: translateY(-12px) rotate(-5deg);
+  }
+}
+
+
+/* =====================================================
+   PROBLEMS
+===================================================== */
+
+.bugfix-problems {
+  padding: 120px 0;
+
+  background: $white;
+}
+
+.bugfix-section-heading {
+  max-width: 750px;
+
+  margin-bottom: 60px;
+}
+
+.bugfix-section-heading > span,
+.bugfix-stack-heading > span,
+.bugfix-process-heading > span {
+  color: $danger;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.bugfix-section-heading h2,
+.bugfix-stack-heading h2,
+.bugfix-process-heading h2 {
+  margin: 14px 0 20px;
+
+  font-size: clamp(38px, 5vw, 58px);
+
+  line-height: 1.08;
+
+  letter-spacing: -2px;
+
+  color: $dark-blue;
+}
+
+.bugfix-section-heading h2 strong,
+.bugfix-stack-heading h2 strong,
+.bugfix-process-heading h2 strong {
+  color: $danger;
+}
+
+.bugfix-section-heading p,
+.bugfix-stack-heading p,
+.bugfix-process-heading p {
+  color: $muted;
+
+  line-height: 1.8;
+
+  max-width: 680px;
+}
+
+
+/* Main Card */
+
+.bugfix-main-card {
+  height: 100%;
+
+  padding: 42px;
+
+  border-radius: 26px;
+
+  color: $white;
+
+  background:
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(255, 104, 92, 0.22),
+      transparent 30%
+    ),
+    linear-gradient(
+      145deg,
+      #171744,
+      #111827
+    );
+
+  position: relative;
+
+  overflow: hidden;
+
+  transition: 0.4s ease;
+}
+
+.bugfix-main-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 25px 60px
+    rgba(23, 23, 68, 0.22);
+}
+
+.bugfix-main-icon {
+  width: 62px;
+  height: 62px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 18px;
+
+  color: $danger;
+
+  background:
+    rgba(255, 104, 92, 0.1);
+
+  border:
+    1px solid
+    rgba(255, 104, 92, 0.2);
+
+  margin-bottom: 30px;
+}
+
+.bugfix-main-label {
+  display: block;
+
+  margin-bottom: 20px;
+
+  color: #94a3b8;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+}
+
+.bugfix-main-card h3 {
+  margin-bottom: 24px;
+
+  font-size: 43px;
+
+  line-height: 1.05;
+
+  letter-spacing: -2px;
+}
+
+.bugfix-main-card p {
+  max-width: 400px;
+
+  color: #aeb8c8;
+
+  line-height: 1.8;
+}
+
+.bugfix-main-bottom {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-top: 40px;
+
+  flex-wrap: wrap;
+}
+
+.bugfix-main-bottom span {
+  color: $danger;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+.bugfix-main-bottom b {
+  color: #64748b;
+}
+
+
+/* Feature Grid */
+
+.bugfix-feature-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 14px;
+}
+
+.bugfix-feature-card {
+  min-height: 115px;
+
+  padding: 20px;
+
+  display: grid;
+
+  grid-template-columns:
+    30px
+    32px
+    1fr
+    25px;
+
+  align-items: center;
+
+  gap: 10px;
+
+  border:
+    1px solid
+    $border;
+
+  border-radius: 18px;
+
+  background: $white;
+
+  position: relative;
+
+  overflow: hidden;
+
+  transition: 0.35s ease;
+}
+
+.bugfix-feature-card::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      $danger,
+      #f97316
+    );
+
+  opacity: 0;
+
+  transition: 0.35s ease;
+}
+
+.bugfix-feature-card > * {
+  position: relative;
+
+  z-index: 1;
+}
+
+.bugfix-feature-card:hover {
+  color: $white;
+
+  border-color: transparent;
+
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 20px 40px
+    rgba(255, 104, 92, 0.15);
+}
+
+.bugfix-feature-card:hover::before {
+  opacity: 1;
+}
+
+.bugfix-feature-number {
+  color: #98a2b3;
+
+  font-size: 11px;
+
+  font-weight: 700;
+}
+
+.bugfix-check {
+  color: $danger;
+}
+
+.bugfix-feature-card:hover .bugfix-check {
+  color: $white;
+}
+
+.bugfix-feature-card span {
+  font-size: 14px;
+
+  font-weight: 700;
+}
+
+.bugfix-feature-arrow {
+  color: #98a2b3;
+
+  transition: 0.3s ease;
+}
+
+.bugfix-feature-card:hover
+  .bugfix-feature-arrow {
+  color: $white;
+
+  transform: translate(4px, -4px);
+}
+
+
+/* =====================================================
+   CAPABILITIES
+===================================================== */
+
+.bugfix-capabilities {
+  padding: 100px 0;
+
+  background: $light;
+}
+
+.bugfix-capability-card {
+  height: 100%;
+
+  padding: 35px;
+
+  border-radius: 24px;
+
+  background: $white;
+
+  border:
+    1px solid
+    $border;
+
+  transition: 0.4s ease;
+}
+
+.bugfix-capability-card:hover {
+  transform: translateY(-8px);
+
+  border-color:
+    rgba(255, 104, 92, 0.25);
+
+  box-shadow:
+    0 25px 50px
+    rgba(15, 23, 42, 0.08);
+}
+
+.bugfix-capability-icon {
+  width: 60px;
+  height: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 25px;
+
+  border-radius: 17px;
+
+  color: $danger;
+
+  background:
+    rgba(255, 104, 92, 0.08);
+
+  transition: 0.35s ease;
+}
+
+.bugfix-capability-card:hover
+  .bugfix-capability-icon {
+  color: $white;
+
+  background: $danger;
+
+  transform:
+    rotate(-5deg)
+    scale(1.05);
+}
+
+.bugfix-capability-card > span {
+  color: #98a2b3;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+.bugfix-capability-card h3 {
+  margin: 12px 0;
+
+  color: $danger;
+
+  font-size: 24px;
+}
+
+.bugfix-capability-card p {
+  margin: 0;
+
+  color: $muted;
+
+  line-height: 1.8;
+}
+
+
+/* =====================================================
+   PROCESS
+===================================================== */
+
+.bugfix-process {
+  padding: 120px 0;
+
+  background: $white;
+}
+
+.bugfix-process-heading {
+  max-width: 700px;
+
+  margin-bottom: 55px;
+}
+
+.bugfix-process-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 16px;
+}
+
+.bugfix-process-card {
+  min-height: 280px;
+
+  padding: 30px;
+
+  border-radius: 22px;
+
+  background: $light;
+
+  border:
+    1px solid
+    $border;
+
+  position: relative;
+
+  overflow: hidden;
+
+  transition: 0.35s ease;
+}
+
+.bugfix-process-card:hover {
+  transform: translateY(-8px);
+
+  background: $dark;
+
+  color: $white;
+
+  box-shadow:
+    0 25px 50px
+    rgba(15, 23, 42, 0.15);
+}
+
+.process-number {
+  display: block;
+
+  color: $danger;
+
+  font-size: 38px;
+
+  font-weight: 800;
+}
+
+.bugfix-process-card:hover
+  .process-number {
+  color: #fb7185;
+}
+
+.process-line {
+  width: 40px;
+  height: 3px;
+
+  margin: 22px 0;
+
+  background: $danger;
+
+  border-radius: 10px;
+}
+
+.bugfix-process-card h3 {
+  margin-bottom: 12px;
+
+  font-size: 21px;
+}
+
+.bugfix-process-card p {
+  color: $muted;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+.bugfix-process-card:hover p {
+  color: #aeb8c8;
+}
+
+.bugfix-process-card svg {
+  position: absolute;
+
+  right: 25px;
+
+  bottom: 25px;
+
+  color: $danger;
+
+  transition: 0.3s ease;
+}
+
+.bugfix-process-card:hover svg {
+  color: #fb7185;
+
+  transform: translate(4px, -4px);
+}
+
+
+/* =====================================================
+   TECHNOLOGY STACK
+===================================================== */
+
+.bugfix-stack {
+  padding: 120px 0;
+
+  background: $light;
+}
+
+.bugfix-stack-heading {
+  max-width: 700px;
+
+  margin-bottom: 55px;
+}
+
+.bugfix-tech-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 14px;
+}
+
+.bugfix-tech-card {
+  min-height: 85px;
+
+  padding: 20px 22px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  border-radius: 16px;
+
+  background: $white;
+
+  border:
+    1px solid
+    $border;
+
+  transition: 0.35s ease;
+
+  animation:
+    bugfixTechReveal
+    0.6s
+    ease
+    both;
+
+  animation-delay:
+    var(--tech-delay);
+}
+
+@keyframes bugfixTechReveal {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+}
+
+.bugfix-tech-card:hover {
+  color: $white;
+
+  background: $dark;
+
+  border-color: $dark;
+
+  transform:
+    translateY(-6px);
+
+  box-shadow:
+    0 18px 35px
+    rgba(15, 23, 42, 0.14);
+}
+
+.tech-index {
+  color: #98a2b3;
+
+  font-size: 11px;
+
+  font-weight: 800;
+}
+
+.tech-name {
+  flex: 1;
+
+  color: $dark-blue;
+
+  font-size: 14px;
+
+  font-weight: 700;
+}
+
+.bugfix-tech-card:hover
+  .tech-name {
+  color: $white;
+}
+
+.bugfix-tech-card svg {
+  color: $danger;
+
+  transition: 0.3s ease;
+}
+
+.bugfix-tech-card:hover svg {
+  color: #fb7185;
+
+  transform:
+    translate(4px, -4px);
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 991px) {
+
+  .bugfix-hero {
+    padding: 120px 0 90px;
+  }
+
+  .bugfix-hero h1 {
+    font-size: 58px;
+  }
+
+  .bugfix-visual {
+    min-height: 450px;
+
+    margin-top: 20px;
+  }
+
+  .bugfix-feature-grid {
+    margin-top: 20px;
+  }
+
+  .bugfix-process-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .bugfix-tech-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+}
+
+
+@media (max-width: 767px) {
+
+  .bugfix-hero {
+    padding: 100px 0 70px;
+  }
+
+  .bugfix-hero h1 {
+    font-size: 48px;
+
+    letter-spacing: -2px;
+  }
+
+  .bugfix-hero-text {
+    font-size: 15px;
+  }
+
+  .bugfix-stats {
+    gap: 24px;
+  }
+
+  .bugfix-visual {
+    min-height: 420px;
+  }
+
+  .bugfix-terminal {
+    width: 100%;
+
+    transform: none;
+  }
+
+  .bugfix-floating {
+    transform: scale(0.85);
+  }
+
+  .bugfix-icon-one {
+    left: -5px;
+  }
+
+  .bugfix-icon-two {
+    right: -5px;
+  }
+
+  .bugfix-problems,
+  .bugfix-process,
+  .bugfix-stack {
+    padding: 85px 0;
+  }
+
+  .bugfix-section-heading h2,
+  .bugfix-stack-heading h2,
+  .bugfix-process-heading h2 {
+    font-size: 42px;
+  }
+
+  .bugfix-feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bugfix-process-grid {
+    grid-template-columns:
+      1fr 1fr;
+  }
+
+  .bugfix-tech-grid {
+    grid-template-columns:
+      1fr 1fr;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .bugfix-hero {
+    padding-top: 90px;
+  }
+
+  .bugfix-hero h1 {
+    font-size: 39px;
+  }
+
+  .bugfix-badge {
+    font-size: 10px;
+  }
+
+  .bugfix-hero-buttons {
+    flex-direction: column;
+  }
+
+  .bugfix-primary-btn,
+  .bugfix-secondary-btn {
+    width: 100%;
+  }
+
+  .bugfix-stats {
+    display: grid;
+
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .bugfix-visual {
+    min-height: 360px;
+  }
+
+  .bugfix-terminal-body {
+    padding: 20px 12px;
+  }
+
+  .terminal-line {
+    font-size: 10px;
+  }
+
+  .terminal-line i {
+    width: 20px;
+
+    margin-right: 5px;
+  }
+
+  .bugfix-main-card {
+    padding: 30px;
+  }
+
+  .bugfix-main-card h3 {
+    font-size: 37px;
+  }
+
+  .bugfix-process-grid,
+  .bugfix-tech-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bugfix-final-cta {
+    padding: 90px 0;
+  }
+
+  .bugfix-cta-inner h2 {
+    font-size: 43px;
+  }
+
+  .bugfix-cta-button {
+    width: 100%;
+  }
+
+}

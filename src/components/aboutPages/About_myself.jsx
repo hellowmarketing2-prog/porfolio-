@@ -1,13 +1,18 @@
-import React from "react";
-import "../../assets/css/about_css/About_myself.scss";
-import "../../assets/css/style.scss";
 
-import ProfileImage from "../../assets/images/about.png";
+import Layout from "../common/Layout";
+import Experience from "../aboutPages/Experience";
+import React from "react";
+import AboutMyselfImage from '../../assets/images/aboutmyself.png'
+import '../../assets/css/about_css/About_myself.scss'
+import   "../../assets/css/about_css/experience.scss";
+
 
 const About = () => {
   return (
-    <section className="about-section" id="about">
-      <div className="container">
+    
+    <Layout>
+<section className="about-section" id="about">
+      <div className="container mt-5">
         <div className="row align-items-center g-5">
           {/* LEFT SIDE - IMAGE */}
           <div className="col-lg-5">
@@ -19,7 +24,7 @@ const About = () => {
               {/* Image */}
               <div className="about-image-box">
                 <img
-                  src={ProfileImage}
+                  src={AboutMyselfImage}
                   alt="Aziz Ali"
                   className="about-image"
                 />
@@ -83,9 +88,9 @@ const About = () => {
               {/* Buttons */}
               <div className="about-buttons">
             
-               <a href="/about-myself">
+               <a href="#contact">
                  <button type="button" className="gemilan-bt-send">
-                  <span className="gemilan-bt-send__t">Read More</span>
+                  <span className="gemilan-bt-send__t">Hire Me</span>
                   <span className="gemilan-bt-send__p">
                     <svg
                       viewBox="0 0 24 24"
@@ -125,7 +130,12 @@ const About = () => {
         </div>
       </div>
     </section>
+    <Experience />
+    </Layout>
+    
+   
   );
 };
 
 export default About;
+

@@ -1,0 +1,407 @@
+
+/* =========================================
+   PROJECT SECTION
+========================================= */
+
+.project-section {
+  position: relative;
+  padding: 0px 0;
+  background: #f8faff;
+  overflow: hidden;
+}
+
+
+/* =========================================
+   SECTION HEADING
+========================================= */
+
+.project-heading {
+  max-width: 850px;
+  margin-bottom: 70px;
+}
+
+.left-p {
+  margin-bottom: 15px;
+}
+
+.left-span {
+  position: relative;
+  display: inline-block;
+  padding-left: 35px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #666;
+}
+
+.left-span::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 22px;
+  height: 1px;
+  background: #111;
+  transform: translateY(-50%);
+}
+
+.title-1 {
+  margin: 0;
+  font-size: clamp(42px, 5vw, 72px);
+  line-height: 1.02;
+  font-weight: 700;
+  letter-spacing: -2px;
+  color: #111;
+}
+
+.title-2 {
+  color: #777;
+  font-weight: 400;
+}
+
+.project-intro {
+  max-width: 650px;
+  margin-top: 28px;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #777;
+}
+
+
+/* =========================================
+   PROJECT GRID
+========================================= */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 70px 45px;
+  align-items: start;
+}
+
+
+/* =========================================
+   PROJECT CARD
+========================================= */
+
+.project-card {
+  position: relative;
+  width: 100%;
+  background: #fff;
+  border-radius: 40px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.07);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Alternate card position */
+
+.project-card-offset {
+  margin-top: 100px;
+  margin-bottom: 40px;
+}
+
+
+/* =========================================
+   BROWSER HEADER
+========================================= */
+
+.project-browser-header {
+  height: 42px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 0 16px;
+  background: #171717;
+}
+
+.browser-dots {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.browser-dots span {
+  width: 9px;
+  height: 9px;
+  display: block;
+  border-radius: 50%;
+  background: #fff;
+  opacity: 0.5;
+}
+
+.browser-search {
+  flex: 1;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.browser-search span {
+  font-size: 9px;
+  color: rgba(255, 255, 255, 0.45);
+  letter-spacing: 0.5px;
+}
+
+
+/* =========================================
+   PROJECT IMAGE
+========================================= */
+
+.project-image {
+  position: relative;
+  height: 420px;
+  overflow: hidden;
+  background: #eee;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.06);
+}
+
+
+/* =========================================
+   OVERLAY
+========================================= */
+
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  padding: 35px;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.92) 0%,
+    rgba(0, 0, 0, 0.65) 45%,
+    rgba(0, 0, 0, 0.05) 100%
+  );
+
+  opacity: 0;
+  transition: opacity 0.45s ease;
+}
+
+.project-card:hover .project-overlay {
+  opacity: 1;
+}
+
+
+/* =========================================
+   OVERLAY CONTENT
+========================================= */
+
+.overlay-content {
+  width: 100%;
+  transform: translateY(25px);
+  transition: transform 0.45s ease;
+}
+
+.project-card:hover .overlay-content {
+  transform: translateY(0);
+}
+
+.project-number {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.overlay-content h3 {
+  margin: 0 0 12px;
+  max-width: 500px;
+  font-size: 28px;
+  line-height: 1.2;
+  font-weight: 600;
+  color: #fff;
+}
+
+.overlay-content p {
+  max-width: 600px;
+  margin: 0 0 20px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+
+/* =========================================
+   TECHNOLOGIES
+========================================= */
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 25px;
+}
+
+.project-tech span {
+  padding: 6px 11px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 30px;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.85);
+  letter-spacing: 0.4px;
+}
+
+
+/* =========================================
+   VIEW WORK
+========================================= */
+
+.view-work {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  padding-bottom: 7px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+
+  transition: gap 0.3s ease, border-color 0.3s ease;
+}
+
+.view-work:hover {
+  gap: 18px;
+  color: #fff;
+  border-color: #fff;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 991px) {
+
+  .project-section {
+    padding: 90px 0;
+  }
+
+  .projects-grid {
+    gap: 40px 25px;
+  }
+
+  .project-card-offset {
+    margin-top: 60px;
+  }
+
+  .project-image {
+    height: 360px;
+  }
+
+  .project-overlay {
+    padding: 25px;
+  }
+
+  .overlay-content h3 {
+    font-size: 24px;
+  }
+}
+
+
+@media (max-width: 767px) {
+
+  .project-section {
+    padding: 70px 0;
+  }
+
+  .project-heading {
+    margin-bottom: 45px;
+  }
+
+  .title-1 {
+    font-size: 45px;
+  }
+
+  .project-intro {
+    font-size: 15px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .project-card-offset {
+    margin-top: 0;
+  }
+
+  .project-image {
+    height: 400px;
+  }
+
+  /*
+    Mobile par overlay permanently visible
+    rakha hai taake description hidden na ho.
+  */
+
+  .project-overlay {
+    opacity: 1;
+    padding: 25px;
+  }
+
+  .overlay-content {
+    transform: translateY(0);
+  }
+
+  .overlay-content h3 {
+    font-size: 23px;
+  }
+
+  .overlay-content p {
+    font-size: 13px;
+  }
+}
+
+
+@media (max-width: 480px) {
+
+  .project-image {
+    height: 360px;
+  }
+
+  .project-browser-header {
+    height: 38px;
+  }
+
+  .project-overlay {
+    padding: 20px;
+  }
+
+  .overlay-content h3 {
+    font-size: 21px;
+  }
+
+  .project-tech span {
+    font-size: 10px;
+    padding: 5px 9px;
+  }
+}

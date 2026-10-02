@@ -1,0 +1,1385 @@
+$primary-font: "DM Sans", sans-serif;
+
+$primary-white: #fff;
+$primary-color: #171744;
+$primary-black: #061123;
+$secondary-color: #ff685c;
+$tertiary-color: #2f4858;
+$text-subtitle: #3937b8;
+
+
+/* =========================================================
+   MAIN PAGE
+========================================================= */
+
+.laravel-development-page {
+  font-family: $primary-font;
+  background: #f7f9fc;
+  color: $primary-black;
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.laravel-hero {
+  position: relative;
+  min-height: 760px;
+  padding: 150px 0 100px;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 10% 20%,
+      rgba(255, 104, 92, 0.11),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 90% 65%,
+      rgba(57, 55, 184, 0.09),
+      transparent 30%
+    ),
+    #f7f9fc;
+}
+
+
+/* Glow */
+
+.laravel-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+
+  animation: laravelGlow 6s ease-in-out infinite alternate;
+}
+
+.laravel-glow-one {
+  width: 270px;
+  height: 270px;
+
+  background: rgba(255, 104, 92, 0.13);
+
+  top: 90px;
+  left: -120px;
+}
+
+.laravel-glow-two {
+  width: 320px;
+  height: 320px;
+
+  background: rgba(57, 55, 184, 0.10);
+
+  right: -150px;
+  bottom: 0;
+
+  animation-delay: 2s;
+}
+
+@keyframes laravelGlow {
+  from {
+    transform: translate(0, 0) scale(1);
+  }
+
+  to {
+    transform: translate(35px, -25px) scale(1.15);
+  }
+}
+
+
+/* =========================================================
+   BADGE
+========================================================= */
+
+.laravel-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 9px 16px;
+
+  border: 1px solid #e1e4ec;
+  border-radius: 50px;
+
+  background: rgba(255, 255, 255, 0.8);
+
+  color: $secondary-color;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 1.7px;
+
+  margin-bottom: 25px;
+
+  animation: laravelFadeUp 0.8s ease both;
+}
+
+.laravel-badge-dot {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: $secondary-color;
+
+  box-shadow:
+    0 0 0 5px rgba(255, 104, 92, 0.08),
+    0 0 15px rgba(255, 104, 92, 0.7);
+
+  animation: laravelDot 1.8s infinite;
+}
+
+@keyframes laravelDot {
+  50% {
+    transform: scale(1.6);
+    opacity: 0.55;
+  }
+}
+
+
+/* =========================================================
+   HERO HEADING
+========================================================= */
+
+.laravel-hero h1 {
+  margin: 0;
+
+  font-size: clamp(48px, 6vw, 78px);
+
+  line-height: 1.03;
+
+  letter-spacing: -3px;
+
+  font-weight: 800;
+
+  color: $secondary-color;
+
+  animation:
+    laravelFadeUp
+    0.8s
+    0.1s
+    ease
+    both;
+}
+
+.laravel-hero h1 span {
+  background:
+    linear-gradient(
+      90deg,
+      $secondary-color,
+      #e94b43,
+      $text-subtitle
+    );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* Hero Paragraph */
+
+.laravel-hero-text {
+  max-width: 650px;
+
+  margin: 28px 0 0;
+
+  color: #667085;
+
+  font-size: 17px;
+
+  line-height: 1.8;
+
+  animation:
+    laravelFadeUp
+    0.8s
+    0.2s
+    ease
+    both;
+}
+
+
+/* =========================================================
+   HERO BUTTONS
+========================================================= */
+
+.laravel-hero-buttons {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  margin-top: 35px;
+
+  animation:
+    laravelFadeUp
+    0.8s
+    0.3s
+    ease
+    both;
+}
+
+.laravel-primary-btn,
+.laravel-secondary-btn {
+  min-height: 54px;
+
+  padding: 0 23px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 13px;
+
+  border-radius: 13px;
+
+  text-decoration: none;
+
+  font-weight: 700;
+
+  transition: 0.35s ease;
+}
+
+
+/* Primary */
+
+.laravel-primary-btn {
+  color: white;
+
+  background: $secondary-color;
+
+  box-shadow:
+    0 15px 35px
+    rgba(255, 104, 92, 0.22);
+}
+
+.laravel-primary-btn:hover {
+  color: white;
+
+  transform: translateY(-5px);
+
+  background: #ed574d;
+
+  box-shadow:
+    0 20px 45px
+    rgba(255, 104, 92, 0.30);
+}
+
+.laravel-primary-btn svg {
+  transition: 0.35s ease;
+}
+
+.laravel-primary-btn:hover svg {
+  transform: translate(4px, -4px);
+}
+
+
+/* Secondary */
+
+.laravel-secondary-btn {
+  color: #344054;
+
+  border: 1px solid #d9e0eb;
+
+  background: white;
+}
+
+.laravel-secondary-btn:hover {
+  color: $secondary-color;
+
+  border-color: rgba(255, 104, 92, 0.4);
+
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 12px 25px
+    rgba(15, 23, 42, 0.06);
+}
+
+
+/* =========================================================
+   STATS
+========================================================= */
+
+.laravel-stats {
+  display: flex;
+
+  gap: 32px;
+
+  margin-top: 45px;
+
+  animation:
+    laravelFadeUp
+    0.8s
+    0.4s
+    ease
+    both;
+}
+
+.laravel-stats div {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.laravel-stats strong {
+  font-size: 21px;
+
+  color: $primary-black;
+}
+
+.laravel-stats span {
+  color: #98a2b3;
+
+  font-size: 11px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   BACKEND VISUAL
+========================================================= */
+
+.laravel-visual {
+  position: relative;
+
+  min-height: 470px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* Backend Card */
+
+.laravel-backend-card {
+  position: relative;
+
+  width: min(100%, 455px);
+
+  overflow: hidden;
+
+  border-radius: 25px;
+
+  background: #171744;
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.08);
+
+  box-shadow:
+    0 40px 80px
+    rgba(23, 23, 68, 0.23);
+
+  transform: rotate(2deg);
+
+  z-index: 2;
+
+  animation:
+    laravelFloatingCard
+    5s
+    ease-in-out
+    infinite;
+}
+
+@keyframes laravelFloatingCard {
+  0%,
+  100% {
+    transform:
+      translateY(0)
+      rotate(2deg);
+  }
+
+  50% {
+    transform:
+      translateY(-15px)
+      rotate(-1deg);
+  }
+}
+
+
+/* Card Top */
+
+.laravel-card-top {
+  height: 57px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 0 20px;
+
+  color: #98a2b3;
+
+  font-size: 12px;
+
+  border-bottom: 1px solid
+    rgba(255, 255, 255, 0.07);
+}
+
+.laravel-window-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.laravel-window-dots span {
+  width: 9px;
+  height: 9px;
+
+  border-radius: 50%;
+
+  background: #667085;
+}
+
+
+/* Code */
+
+.laravel-code {
+  min-height: 285px;
+
+  padding: 30px 25px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  gap: 14px;
+
+  font-family: monospace;
+}
+
+.laravel-code-line {
+  color: #cbd5e1;
+
+  font-size: 13px;
+
+  white-space: nowrap;
+}
+
+.laravel-code-line i {
+  display: inline-block;
+
+  width: 25px;
+
+  color: #475467;
+
+  font-style: normal;
+}
+
+.laravel-code-line b {
+  color: #ff8b80;
+}
+
+.laravel-code-line em {
+  color: #a5b4fc;
+
+  font-style: normal;
+}
+
+
+/* Status */
+
+.laravel-status {
+  margin: 0 24px 24px;
+
+  padding: 12px 15px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  border-radius: 10px;
+
+  background:
+    rgba(34, 197, 94, 0.08);
+
+  color: #86efac;
+
+  font-size: 12px;
+}
+
+.laravel-status strong {
+  margin-left: auto;
+
+  color: #4ade80;
+}
+
+.laravel-status-dot {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #22c55e;
+
+  box-shadow:
+    0 0 12px
+    rgba(34, 197, 94, 0.8);
+
+  animation: statusPulse 1.7s infinite;
+}
+
+@keyframes statusPulse {
+  50% {
+    transform: scale(1.5);
+    opacity: 0.55;
+  }
+}
+
+
+/* =========================================================
+   FLOATING ICONS
+========================================================= */
+
+.laravel-floating {
+  position: absolute;
+
+  z-index: 3;
+
+  width: 59px;
+  height: 59px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 17px;
+
+  background: white;
+
+  border: 1px solid #e4e7ec;
+
+  box-shadow:
+    0 20px 40px
+    rgba(15, 23, 42, 0.14);
+
+  color: $secondary-color;
+
+  animation:
+    laravelIconFloat
+    4s
+    ease-in-out
+    infinite;
+}
+
+.laravel-icon-one {
+  top: 30px;
+  left: 0;
+}
+
+.laravel-icon-two {
+  top: 100px;
+  right: -5px;
+
+  color: $text-subtitle;
+
+  animation-delay: 0.8s;
+}
+
+.laravel-icon-three {
+  bottom: 45px;
+  left: 20px;
+
+  color: #10b981;
+
+  animation-delay: 1.5s;
+}
+
+@keyframes laravelIconFloat {
+  0%,
+  100% {
+    transform:
+      translateY(0)
+      rotate(0);
+  }
+
+  50% {
+    transform:
+      translateY(-12px)
+      rotate(5deg);
+  }
+}
+
+
+/* =========================================================
+   OVERVIEW
+========================================================= */
+
+.laravel-overview {
+  padding: 120px 0;
+
+  background: white;
+}
+
+.laravel-section-heading {
+  max-width: 720px;
+
+  margin-bottom: 60px;
+}
+
+.laravel-section-heading > span,
+.laravel-stack-heading > span {
+  color: $text-subtitle;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.laravel-section-heading h2,
+.laravel-stack-heading h2 {
+  margin: 15px 0;
+
+  color: $secondary-color;
+
+  font-size: clamp(36px, 4vw, 52px);
+
+  line-height: 1.1;
+
+  letter-spacing: -2px;
+}
+
+.laravel-section-heading h2 strong,
+.laravel-stack-heading h2 strong {
+  color: $primary-black;
+}
+
+.laravel-section-heading p,
+.laravel-stack-heading p {
+  max-width: 620px;
+
+  color: #667085;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   MAIN CARD
+========================================================= */
+
+.laravel-main-card {
+  position: relative;
+
+  min-height: 440px;
+
+  padding: 40px;
+
+  overflow: hidden;
+
+  border-radius: 25px;
+
+  color: white;
+
+  background:
+    radial-gradient(
+      circle at 85% 5%,
+      rgba(255, 104, 92, 0.40),
+      transparent 30%
+    ),
+    #171744;
+
+  transition: 0.4s ease;
+}
+
+.laravel-main-card:hover {
+  transform: translateY(-9px);
+
+  box-shadow:
+    0 30px 60px
+    rgba(23, 23, 68, 0.20);
+}
+
+
+/* Main Icon */
+
+.laravel-main-icon {
+  width: 65px;
+  height: 65px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 18px;
+
+  color: $secondary-color;
+
+  background:
+    rgba(255, 255, 255, 0.09);
+
+  margin-bottom: 35px;
+
+  transition: 0.4s ease;
+}
+
+.laravel-main-card:hover .laravel-main-icon {
+  transform:
+    rotate(-8deg)
+    scale(1.08);
+
+  background:
+    rgba(255, 104, 92, 0.12);
+}
+
+
+/* Label */
+
+.main-card-label {
+  color: #98a2b3;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+
+/* Heading */
+
+.laravel-main-card h3 {
+  margin: 18px 0;
+
+  font-size: 39px;
+
+  line-height: 1.05;
+
+  letter-spacing: -1px;
+}
+
+.laravel-main-card p {
+  max-width: 400px;
+
+  color: #98a2b3;
+
+  line-height: 1.8;
+}
+
+
+/* Bottom */
+
+.main-card-bottom {
+  position: absolute;
+
+  left: 40px;
+  right: 40px;
+  bottom: 35px;
+
+  padding-top: 20px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  border-top: 1px solid
+    rgba(255, 255, 255, 0.10);
+
+  color: #98a2b3;
+
+  font-size: 10px;
+
+  letter-spacing: 1.5px;
+}
+
+.main-card-bottom b {
+  color: $secondary-color;
+}
+
+
+/* =========================================================
+   FEATURE CARDS
+========================================================= */
+
+.laravel-feature-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 14px;
+}
+
+.laravel-feature-card {
+  position: relative;
+
+  min-height: 105px;
+
+  padding: 20px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  overflow: hidden;
+
+  border: 1px solid #e4e7ec;
+
+  border-radius: 17px;
+
+  background: #fafbfc;
+
+  transition: 0.35s ease;
+}
+
+.laravel-feature-card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 100px;
+  height: 100px;
+
+  right: -55px;
+  bottom: -55px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(255, 104, 92, 0.15);
+
+  transition: 0.4s ease;
+}
+
+.laravel-feature-card:hover::before {
+  width: 180px;
+  height: 180px;
+}
+
+
+/* Hover */
+
+.laravel-feature-card:hover {
+  color: white;
+
+  background: $primary-color;
+
+  border-color: $primary-color;
+
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 20px 40px
+    rgba(23, 23, 68, 0.14);
+}
+
+
+/* Check */
+
+.laravel-check {
+  flex-shrink: 0;
+
+  color: $secondary-color;
+
+  transition: 0.3s ease;
+}
+
+.laravel-feature-card:hover .laravel-check {
+  transform: scale(1.2);
+
+  color: #ff887e;
+}
+
+
+/* Text */
+
+.laravel-feature-card > span:not(.laravel-feature-number) {
+  position: relative;
+  z-index: 2;
+
+  font-size: 13px;
+
+  line-height: 1.4;
+
+  font-weight: 600;
+}
+
+
+/* Number */
+
+.laravel-feature-number {
+  position: absolute;
+
+  right: 14px;
+  top: 11px;
+
+  color: #d0d5dd;
+
+  font-size: 10px;
+
+  font-weight: 700;
+}
+
+.laravel-feature-card:hover
+  .laravel-feature-number {
+  color: #667085;
+}
+
+
+/* Arrow */
+
+.laravel-feature-arrow {
+  position: absolute;
+
+  right: 13px;
+  bottom: 11px;
+
+  opacity: 0;
+
+  transform:
+    translate(-5px, 5px);
+
+  transition: 0.3s ease;
+}
+
+.laravel-feature-card:hover
+  .laravel-feature-arrow {
+  opacity: 1;
+
+  transform:
+    translate(0, 0);
+
+  color: $secondary-color;
+}
+
+
+/* =========================================================
+   CAPABILITIES
+========================================================= */
+
+.laravel-capabilities {
+  padding: 100px 0;
+
+  background: #f7f9fc;
+}
+
+.capability-card {
+  position: relative;
+
+  min-height: 300px;
+
+  padding: 32px;
+
+  border: 1px solid #e4e7ec;
+
+  border-radius: 22px;
+
+  background: white;
+
+  overflow: hidden;
+
+  transition: 0.4s ease;
+}
+
+.capability-card::after {
+  content: "";
+  position: absolute;
+
+  width: 150px;
+  height: 150px;
+
+  right: -80px;
+  bottom: -80px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(255, 104, 92, 0.10);
+
+  transition: 0.5s ease;
+}
+
+.capability-card:hover::after {
+  width: 250px;
+  height: 250px;
+}
+
+.capability-card:hover {
+  transform: translateY(-8px);
+
+  border-color:
+    rgba(255, 104, 92, 0.25);
+
+  box-shadow:
+    0 25px 50px
+    rgba(15, 23, 42, 0.08);
+}
+
+.capability-icon {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 16px;
+
+  color: $secondary-color;
+
+  background:
+    rgba(255, 104, 92, 0.08);
+
+  margin-bottom: 40px;
+
+  transition: 0.35s ease;
+}
+
+.capability-card:hover
+  .capability-icon {
+  transform:
+    rotate(-7deg)
+    scale(1.08);
+
+  background:
+    rgba(255, 104, 92, 0.14);
+}
+
+.capability-card > span {
+  position: absolute;
+
+  top: 30px;
+  right: 30px;
+
+  color: #98a2b3;
+
+  font-size: 11px;
+
+  font-weight: 700;
+}
+
+.capability-card h3 {
+  margin-bottom: 12px;
+color: $secondary-color;
+
+  font-size: 22px;
+}
+
+.capability-card p {
+  color: #667085;
+
+  line-height: 1.75;
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   TECHNOLOGY STACK
+========================================================= */
+
+.laravel-stack {
+  padding: 120px 0;
+
+  background: white;
+}
+
+.laravel-stack-heading {
+  max-width: 650px;
+
+  margin-bottom: 50px;
+}
+
+.laravel-tech-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 14px;
+}
+
+.laravel-tech-card {
+  min-height: 75px;
+
+  padding: 0 20px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  border: 1px solid #e4e7ec;
+
+  border-radius: 15px;
+
+  background: #fafbfc;
+
+  animation:
+    laravelTechAppear
+    0.7s
+    var(--tech-delay)
+    both;
+
+  transition: 0.35s ease;
+}
+
+@keyframes laravelTechAppear {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+}
+
+.laravel-tech-card:hover {
+  color: white !important;
+
+  background: $primary-color;
+
+  border-color: $primary-color;
+
+  transform: translateY(-7px);
+
+  box-shadow:
+    0 20px 35px
+    rgba(23, 23, 68, 0.12);
+}
+
+.tech-index {
+  color: #98a2b3;
+
+  font-size: 10px;
+
+  font-weight: 700;
+}
+
+.tech-name {
+
+  flex: 1;
+color : #636372 !important;
+  font-size: 14px;
+
+  font-weight: 700;
+}
+
+.laravel-tech-card svg {
+  transition: 0.3s ease;
+}
+
+.laravel-tech-card:hover svg {
+  color: $secondary-color;
+
+  transform:
+    translate(4px, -4px);
+}
+
+
+
+
+/* =========================================================
+   CTA ORBS
+========================================================= */
+
+.laravel-cta-orb {
+  position: absolute;
+
+  border-radius: 50%;
+
+  filter: blur(80px);
+
+  opacity: 0.25;
+
+  animation:
+    laravelOrbMove
+    7s
+    ease-in-out
+    infinite
+    alternate;
+}
+
+.laravel-orb-one {
+  width: 350px;
+  height: 350px;
+
+  background: $secondary-color;
+
+  top: -180px;
+  left: -100px;
+}
+
+.laravel-orb-two {
+  width: 400px;
+  height: 400px;
+
+  background: $text-subtitle;
+
+  right: -180px;
+  bottom: -220px;
+
+  animation-delay: 2s;
+}
+
+@keyframes laravelOrbMove {
+  to {
+    transform:
+      translate(40px, -30px)
+      scale(1.15);
+  }
+}
+
+
+/* =========================================================
+   GENERAL ANIMATION
+========================================================= */
+
+@keyframes laravelFadeUp {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 991px) {
+
+  .laravel-hero {
+    padding: 130px 0 80px;
+  }
+
+  .laravel-visual {
+    min-height: 430px;
+  }
+
+  .laravel-tech-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+}
+
+
+@media (max-width: 767px) {
+
+  .laravel-hero h1 {
+    letter-spacing: -2px;
+  }
+
+  .laravel-hero-buttons {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .laravel-primary-btn,
+  .laravel-secondary-btn {
+    width: 100%;
+  }
+
+  .laravel-stats {
+    justify-content: space-between;
+
+    gap: 10px;
+  }
+
+  .laravel-visual {
+    min-height: 390px;
+  }
+
+  .laravel-backend-card {
+    transform: rotate(0);
+  }
+
+  .laravel-feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .laravel-tech-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .laravel-overview,
+  .laravel-stack,
+  .laravel-capabilities {
+    padding: 80px 0;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .laravel-hero {
+    padding-top: 110px;
+  }
+
+  .laravel-hero h1 {
+    font-size: 45px;
+  }
+
+  .laravel-hero-text {
+    font-size: 15px;
+  }
+
+  .laravel-backend-card {
+    width: 95%;
+  }
+
+  .laravel-code {
+    padding: 25px 15px;
+  }
+
+  .laravel-code-line {
+    font-size: 10px;
+  }
+
+  .laravel-floating {
+    width: 48px;
+    height: 48px;
+  }
+
+  .laravel-icon-one {
+    left: -2px;
+  }
+
+  .laravel-icon-two {
+    right: -2px;
+  }
+
+  .laravel-main-card {
+    min-height: 410px;
+  }
+
+  .laravel-main-card h3 {
+    font-size: 34px;
+  }
+
+}
